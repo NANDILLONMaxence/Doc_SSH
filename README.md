@@ -73,7 +73,11 @@
 - Installer le client OpenSSH: `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
 
 ### Authentification SSH par clés:
-- Générer une clé SSH: `ssh-keygen -b 4096`
+- Générer une clé SSH: `ssh-keygen -t ed25519`
+ou
+-  Générer une clé SSH: `ssh-keygen -b 4096`
+ou pour Ubuntu / Debian
+-  Générer une clé SSH:ssh-keygen -t ecdsa -b 521 -N votre-mot-de-passe
 - Votre clé se situe à cet emplacement: C:\Users\[utilisateur]/.ssh/ Sous le nom de id_rsa et id_rsa.pub
 - Mettre la clé sur le serveur
 - Pour Windows, éditer le fichier `~/.ssh/authorized_keys` sur le serveur
